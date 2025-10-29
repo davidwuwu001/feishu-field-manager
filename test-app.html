@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>飞书字段管理工具 - 测试</title>
+</head>
+<body>
+    <h1>🎯 飞书字段管理工具</h1>
+    <p>应用正在运行中...</p>
+    <script>
+        console.log('测试页面加载成功');
+        fetch('/api/test')
+            .then(response => response.json())
+            .then(data => console.log('API测试:', data))
+            .catch(error => console.error('API错误:', error));
+    </script>
+</body>
+</html>
