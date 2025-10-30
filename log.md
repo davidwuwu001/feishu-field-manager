@@ -51,6 +51,8 @@
 - 后端API服务器运行在端口3000
 - 选项管理功能已实现，支持单选和多选字段的选项编辑和删除
 
+# 飞书字段管理器开发日志
+
 ## 2023年12月5日
 
 ### 完成的工作
@@ -74,17 +76,28 @@
    - 修复了tables.js API中的token获取逻辑
    - 解决了从请求头中正确提取Bearer token的问题
 
+6. **项目同步到GitHub仓库**
+   - 初始化了Git仓库
+   - 添加了远程仓库地址：https://github.com/davidwuwu001/feishu-field-manager.git
+   - 创建了初始提交并推送到GitHub
+   - 项目代码已成功同步到GitHub仓库
+
+7. **字段名称修改问题修复**
+   - 修复了字段名称修改功能，解决了server.cjs中缺少不带ID参数的PUT路由问题
+
 ### 技术要点
 - 使用React Hooks管理组件状态
 - 使用Ant Design组件库构建UI
 - 使用Axios进行API请求
 - 使用Express.js构建后端API
 - 使用Vite作为前端构建工具
+- 使用Git进行版本控制
 
 ### 遇到的问题
 1. 字段编辑页面的条件判断错误，导致无法正确显示编辑表单
 2. 组件导入问题，导致OptionManager组件无法正确使用
 3. Token处理问题，导致后端API无法正确获取前端传递的token
+4. 字段名称修改报错问题
 
 ### 待完成任务
 1. 测试功能并完善错误处理 (已完成)
@@ -97,6 +110,8 @@
 - 前端服务器运行在http://localhost:3004
 - 后端API服务器运行在http://localhost:3000
 - 已修复token处理问题，API调用应该能正常工作
+- 项目已同步到GitHub仓库：https://github.com/davidwuwu001/feishu-field-manager
+- 修复了字段名称修改功能，原因是server.cjs中缺少不带ID参数的PUT路由
 
 ## 2023年12月4日
 

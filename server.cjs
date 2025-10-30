@@ -121,6 +121,23 @@ app.put('/api/fields/:id', async (req, res) => {
   }
 });
 
+app.put('/api/fields', async (req, res) => {
+  try {
+    // 确保req.body存在
+    req.body = req.body || {};
+    
+    // 动态导入处理函数
+    const fieldsModule = await import('./api/fields.js');
+    const handler = fieldsModule.default;
+    
+    // 调用处理函数
+    await handler(req, res);
+  } catch (error) {
+    console.error('Fields API Error:', error);
+    res.status(500).json({ error: 'Internal server error' });
+  }
+});
+
 app.delete('/api/fields/:id', async (req, res) => {
   try {
     // 动态导入处理函数

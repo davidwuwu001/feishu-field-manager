@@ -2,6 +2,10 @@
 
 一个用于管理飞书多维表格字段配置的Web应用程序。
 
+## GitHub仓库
+
+本项目已开源，代码托管在GitHub：[https://github.com/davidwuwu001/feishu-field-manager](https://github.com/davidwuwu001/feishu-field-manager)
+
 ## 功能特点
 
 - 字段列表展示
@@ -59,6 +63,8 @@ feishu-field-manager/
   - 修复了tables.js API中的token获取逻辑
   - 解决了从请求头中正确提取Bearer token的问题
   - 重启了后端服务器以应用修复
+- 字段名称修改问题修复
+  - 修复了字段名称修改功能，解决了server.cjs中缺少不带ID参数的PUT路由问题
 
 ### 已完成功能
 - [x] 项目初始化
